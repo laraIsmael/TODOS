@@ -4,6 +4,12 @@ main = "src/index.js"
 compatibility_date = "2024-05-24"
 compatibility_flags = ["nodejs_compat"]
 
+# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
+# Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
+kv_namespaces = [
+  { binding = "TODOS", preview_id = "c6a89e87a551421f960d0fd0a65684f1" }
+]
+
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
